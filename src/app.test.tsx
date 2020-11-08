@@ -6,10 +6,10 @@ describe('App', () => {
   it(`Scenario: Can see Home Screen on App load
       Given any
       When App load
-      Then I should see "Home"`, async () => {
-    const {getByText} = render(<App />);
-    await waitFor(() => expect(getByText('Home')).toBeDefined());
+      Then I should see 'Home Screen'`, async () => {
+    const {getByTestId} = render(<App />);
+    await waitFor(() => expect(getByTestId('HomeScreen')).toBeDefined());
 
-    expect(getByText('Home')).toBeDefined();
+    expect(getByTestId('HomeScreen')).toBeDefined();
   });
 });
